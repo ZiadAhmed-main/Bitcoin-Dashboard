@@ -1,0 +1,427 @@
+/*------------Cores-------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/*------------Cores-------------------------*/
+
+
+/* -------------Helper Classes-------------- */
+.d-flex {
+    display: flex;
+}
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.space-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+.w-full {
+    width: 100%;
+}
+/* -------------Helper Classes-------------- */
+
+/*--------------Side bar--------------------*/
+.main-container {
+    min-height: 100vh;
+}
+.sidebar {
+    background-color: #0d40c6;
+    width: 65px;
+    padding: 10px;
+}
+.sidebar ul {
+    margin-top: 80px;
+}
+@media (max-width: 767px) {
+    .sidebar ul {
+        margin-top: 20px;
+    }
+}
+.sidebar ul li a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+.sidebar ul li a:hover {
+    background-color: #0263da;
+}
+/*--------------Side bar--------------------*/
+
+/*--------------Nav bar--------------------*/
+.main .navbar {
+    padding-inline-end: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbebfa;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .main .navbar {
+        padding-inline-end: 0;
+        padding-inline-end: 10px;
+    }
+}
+.main .navbar .logo {
+    width: 160px;
+}
+@media (max-width: 767px) {
+    .main .navbar .logo {
+        width: 90px;
+    }
+}
+.wallet {
+    margin-right: 40px;
+    display: flex;
+}
+@media (max-width: 767px) {
+    .wallet {
+        margin-right: 0;
+    }
+}
+.wallet span {
+    padding: 8px 20px;
+    border-radius: 25px 0 0 25px;
+}
+@media (max-width: 767px) {
+    .wallet span {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+.wallet span:first-child {
+    background-color: #dbebfa;
+    color: #1c79c0;
+    font-weight: bold;
+}
+.wallet span:first-child i {
+    margin-left: 10px;
+}
+.wallet span:last-child {
+    border: 1px solid #dbebfa;
+    border-radius: 0 25px 25px 0;
+    color: #66a0bd;
+    font-weight: bold;
+}
+.main .user-settings > i {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #0263da;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.main .user-menu {
+    color: #1769ff;
+    cursor: pointer;
+}
+.main .user-menu i {
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    .main .navbar .user-settings {
+        display: none;
+    }
+}
+
+.main .navbar .user-menu input {
+    display: none;
+}
+.main .user-menu label {
+    cursor: pointer;
+}
+.main .user-menu label:hover {
+    text-decoration: underline;
+}
+.main .navbar .mega-menu {
+    width: 220px;
+    position: absolute;
+    top: 101%;
+    right: 30px;
+    background-color: white;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 12%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+.main .navbar .mega-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    color: #1769ff;
+    transition: .3s;
+}
+.main .navbar .mega-menu ul li a:hover {
+    background-color: #f7f7f7;
+}
+.main .navbar .mega-menu ul li:not(:last-of-type) {
+    border-bottom: 1px solid #dbebfa;
+}
+
+.main .navbar .user-menu input:checked ~ .mega-menu {
+    opacity: 1;
+    pointer-events: all;
+}
+/*--------------Nav bar--------------------*/
+
+/*--------------Welcome-------------------*/
+.main h3 {
+    padding: 35px 80px 60px;
+    color: #0263da;
+    font-size: 16px;
+}
+@media (max-width: 767px) {
+    .main h3 {
+        padding: 35px 20px 60px;
+    }
+}
+.main h3 span {
+    font-weight: normal;
+}
+/*--------------Welcome-------------------*/
+
+.wrapper {
+    padding-left: 100px;
+    gap: 100px;
+}
+@media (max-width: 1200px) {
+    .wrapper {
+        padding-left: 100px;
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .wrapper {
+        padding-left: 0px;
+    }
+}
+.wrapper .left-side {
+    flex: 1;
+}
+.wrapper .right-side {
+    flex: 2;
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .wrapper .right-side {
+        margin-bottom: 15px;
+    }
+}
+.wrapper .btns button {
+    width: 220px;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 6px;
+}
+.wrapper .btns button:first-child {
+    background-color: #0263da;
+    color: white;
+    margin-right: 20px;
+}
+.wrapper .btns button:first-child:hover {
+    background-color: #0559c0;
+}
+@media (max-width: 767px) {
+    .wrapper .btns {
+        margin: auto;
+        width: fit-content;
+    }
+    .wrapper .btns button {
+        width: 120px;
+        margin-right: 10px;
+    }
+}
+.wrapper .btns button:last-child {
+    color: #0263da;
+    border: 1px solid #ccc;
+}
+.wrapper .btns button:last-child:hover {
+    background-color: #ddd;
+}
+
+.wrapper .payment {
+    margin-top: 30px;
+}
+.wrapper .payment .item {
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .wrapper .payment .item {
+        margin-bottom: 10px;
+    }
+}
+.wrapper .payment .item > span {
+    display: block;
+    padding-block: 20px;
+    font-size: 15px;
+}
+
+.wrapper .payment .item .money {
+    min-width: 280px;
+    background-color: #deedfb;
+    display: flex;
+    padding: 12px 25px;
+}
+.wrapper .payment .item:nth-child(3) .money {
+    background-color: #e8eff4;
+}
+.wrapper .payment .item:nth-child(3) .money span {
+    color: #5298b4;
+}
+@media (max-width: 767px) {
+    .wrapper .payment .item .money {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+.wrapper .payment .item .money span {
+    color: #1c36a9;
+    flex: 1;
+}
+
+.wrapper .payment .item .money span:last-child i {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.wrapper .limit {
+    font-size: 15px;
+}
+.wrapper .limit span:first-child {
+    color: #005670;
+}
+.wrapper .limit span:last-child {
+    color: #1c36a9;
+}
+
+.wrapper .exch {
+    width: 100%;
+    margin-block: 25px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 0;
+    background-color: #0abf53;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+@media (max-width: 767px) {
+    .wrapper .limit {
+        font-size: 14px;
+    }
+    .wrapper .exch {
+        padding: 12px;
+    }
+}
+.wrapper .exch:hover {
+    background-color: #07ac49;
+}
+
+.wrapper .left-side .note {
+    color: #9c9fa6;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper .left-side .note {
+        max-width: 300px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .wrapper .right-side {
+        padding-right: 50px;
+    }
+}
+.wrapper .right-side img {
+    width: 60px;
+    border-radius: 50%;
+}
+@media (max-width: 767px) {
+    .wrapper .right-side .persons {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+.wrapper .right-side .persons span {
+    display: block;
+}
+
+.wrapper .right-side .persons .buyer ,
+.wrapper .right-side .persons .seller {
+    gap: 15px;
+}
+.wrapper .right-side .persons .buyer a,
+.wrapper .right-side .persons .seller a {
+    color: #0263da;
+}
+
+.wrapper .right-side .trans {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.wrapper .right-side .trans .line {
+    background-color: #e6f1fb;
+    padding: 18px;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+@media (max-width: 767px) {
+    .wrapper .right-side .trans .line {
+        margin-inline: 18px;
+    }
+}
+.wrapper .right-side .trans .line span {
+    flex: 1;
+    color: #6e7a97;
+}
+@media (max-width: 767px) {
+    .wrapper .right-side .trans .line {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .wrapper .right-side .trans .line span {
+        flex: none;
+        font-size: 14px;
+    }
+}
+.wrapper .right-side .trans .line:first-child span {
+    color: #0263da;
+    font-weight: bold;
+}
+.wrapper .right-side .trans .line:nth-child(6) span:last-child {
+    color: #ff0000;
+    font-weight: bold;
+}
